@@ -21,7 +21,7 @@ const App = () => {
 
 	// Game cards state
 	const [gameCards, setGameCards] = useState<TCardList>(
-		createGameCards() // shuffled cards
+		shuffleCards(createGameCards())
 	)
 	// flipped cards with an array of cards names
 	const [flippedCards, setFlippedCards] = useState<TCard["name"][]>([])

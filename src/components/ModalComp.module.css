@@ -3,10 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(6px);
     visibility: hidden;
     inset: 0;
-    z-index: 10;
+    z-index: 30;
 }
 
 .final_result::before {
@@ -14,7 +14,7 @@
     width: 100dvw;
     height: 100dvh;
     inset: 0;
-    background-color: #d5d0d096;
+    background-color: rgba(2,6,10,0.6);
     content: "";
     z-index: -1;
     pointer-events: none;
@@ -22,13 +22,15 @@
 
 .final_result .final_btn {
     position: absolute;
-    top: 26%;
-    right: 10%;
+    top: 20%;
+    right: 8%;
     border-radius: 50%;
-    padding: 0.5em 0.7em;
-    border: 2px solid var(--secondary);
+    padding: 0.45em 0.6em;
+    border: 1px solid rgba(255,255,255,0.06);
     cursor: pointer;
-    z-index: 10;
+    z-index: 40;
+    background: transparent;
+    color: var(--contrast);
 }
 
 .restart_btn {
@@ -47,16 +49,29 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1em 1.5em;
-    background-color: white;
+    padding: 1.25em 2em;
+    background-color: rgba(6,10,14,0.85);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.04);
+    color: var(--contrast);
+    min-width: 280px;
 }
 
 .final_container>h2 {
-    font-size: 5em;
+    font-size: 3.2em;
     margin: 0.125em 0;
     line-height: 1;
+    color: var(--contrast);
 }
 
 .final_container span {
-    font-size: 2em;
+    font-size: 1.25em;
+    color: var(--muted);
+}
+
+.final_icon {
+    font-size: 2.6em;
+    margin-top: 8px;
+    display: block;
+    color: var(--secondary);
 }
